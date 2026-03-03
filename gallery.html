@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+
+<!-- Filter Buttons -->
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('city')">City</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+  <img src="https://picsum.photos/id/1015/400/300" class="nature" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/id/1011/400/300" class="nature" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/id/1025/400/300" class="city" onclick="openLightbox(this)">
+  <img src="https://picsum.photos/id/1035/400/300" class="city" onclick="openLightbox(this)">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span onclick="closeLightbox()">✖</span>
+  <img id="lightbox-img">
+</div>
+
+<script src="gallery.js"></script>
+</body>
+</html>
